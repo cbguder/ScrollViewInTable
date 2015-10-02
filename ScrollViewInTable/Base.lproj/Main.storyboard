@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xg2-A7-Bwk">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8HE-Rp-rAa">
+            <objects>
+                <tableViewController id="xg2-A7-Bwk" customClass="ViewController" customModule="ScrollViewInTable" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="nj5-e5-IHr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="2cO-5B-FnQ" customClass="TableViewCell" customModule="ScrollViewInTable" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2cO-5B-FnQ" id="ftx-Em-OEL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a1q-lJ-P3j">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
+                                            <animations/>
+                                        </scrollView>
+                                    </subviews>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstItem="a1q-lJ-P3j" firstAttribute="leading" secondItem="ftx-Em-OEL" secondAttribute="leading" id="b24-tI-2GZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="a1q-lJ-P3j" secondAttribute="bottom" id="k5R-6c-TYa"/>
+                                        <constraint firstItem="a1q-lJ-P3j" firstAttribute="top" secondItem="ftx-Em-OEL" secondAttribute="top" id="mMf-vv-tl6"/>
+                                        <constraint firstAttribute="trailing" secondItem="a1q-lJ-P3j" secondAttribute="trailing" id="tQf-gV-zyH"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="scrollView" destination="a1q-lJ-P3j" id="U7E-R7-ee1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xg2-A7-Bwk" id="oO4-dl-izL"/>
+                            <outlet property="delegate" destination="xg2-A7-Bwk" id="GfB-o2-jX6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dPG-Ro-7Cc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="755" y="580"/>
+        </scene>
+    </scenes>
+</document>
